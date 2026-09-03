@@ -1,4 +1,8 @@
-# Selected engineering decisions
+# System requirements and trade-offs
+
+These are requirements and trade-offs represented by the current Billable Meetings system. They explain the product/system boundary without claiming that I personally originated every low-level engineering choice used to implement it.
+
+My direct ownership is the product direction, high-level blueprint, expert/persona orchestration, constraints, acceptance criteria and quality gates. The implementation process is heavily AI-assisted.
 
 ## 1. Freeze objective billing rules before evaluation
 
@@ -36,10 +40,10 @@ The system can produce an evidence-backed verification result while still allowi
 
 **Trade-off:** the product does not pretend software can eliminate every relationship-level disagreement.
 
-## Interview questions this should create
+## Questions this case study is intended to create
 
-- How do you translate a commercial agreement into objective rules?
-- What evidence is authoritative for attendance?
-- When does a rule become too subjective for deterministic handling?
-- Why have a third `REVIEW` state?
-- How would you keep a settlement record reproducible after evidence changes?
+- What commercial problem is the product trying to remove?
+- Which parts of an agreement are suitable for objective automation?
+- Why preserve a third `REVIEW` state?
+- What should count as sufficient evidence for billability?
+- Which parts of the blueprint were requirements I set, and which low-level choices came from the AI-assisted implementation process?
