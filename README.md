@@ -5,6 +5,12 @@
 **Public product:** https://billablemeetings.com  
 **Portfolio:** https://sarmadtawfeek.se/
 
+## My role in this build
+
+I researched the product problem, chose the direction, defined the blueprint and quality expectations, and used specialist AI personas/agents to drive implementation and iteration.
+
+The implementation is heavily AI-assisted. I do **not** claim that I personally hand-wrote every line of code or independently selected every low-level technical mechanism. My direct ownership is the product problem, system requirements, expert/persona orchestration, acceptance criteria and quality gates.
+
 A calendar event can prove that something was booked. It does not automatically prove attendance, qualification or billability.
 
 Billable Meetings OS turns that distinction into an explicit decision system:
@@ -23,9 +29,7 @@ Evidence-backed record
 
 ## What exists today
 
-The private implementation contains substantially more engineering than the public case study previously showed.
-
-Current source evidence includes:
+Current private-source evidence includes:
 
 - a Node.js 24 / pnpm project with a dedicated meeting-billing test suite;
 - deterministic billing evaluation plus replay tooling;
@@ -37,13 +41,13 @@ Current source evidence includes:
 - release and production-authorization guards;
 - secret-hygiene, namespace and site verification checks.
 
-The public repo still does not expose the private rule engine or schemas.
+The public repo does not expose the private rule engine or schemas.
 
 **Start with the evidence layer:** [PROOF.md](PROOF.md)
 
 ## Why a third state matters
 
-`REVIEW` is not a fallback label. It protects the commercial decision from evidence that cannot support a binary answer.
+`REVIEW` protects the commercial decision from evidence that cannot support a binary answer.
 
 Example:
 
@@ -55,19 +59,19 @@ objective billing rule requires attendance
 → REVIEW
 ```
 
-The system should not upgrade a related CRM/calendar event into proof of attendance merely because a cleaner answer is commercially convenient.
+The implementation should not upgrade a related CRM/calendar event into proof of attendance merely because a cleaner answer is commercially convenient.
 
-## One failure case the implementation tests explicitly
+## A tested failure boundary
 
-Invalid or unsupported meeting duration is not allowed to flow through as if it were a normal qualified meeting. The private test suite contains a dedicated invalid-duration case alongside the core billing tests.
+The private test suite contains a dedicated invalid-duration case. Malformed timing data should not silently become a valid billability input.
 
-That kind of edge case matters because deterministic automation becomes dangerous when malformed inputs are silently normalized into valid business facts.
+This is implementation behavior evidenced in the private source, not a claim that I personally authored the underlying test or low-level validation mechanism.
 
-## Where AI fits
+## How AI fits
 
-AI accelerates implementation candidates, test ideas, integration work and review. It does not get to invent agreement meaning or missing evidence.
+AI agents/models are used heavily for implementation, integration work, test generation, review and iteration.
 
-I treat the agreement version, objective rule boundary, evidence authority and `REVIEW` conditions as explicit constraints so the generated implementation can be checked against the commercial contract.
+My role is to define the commercial problem, blueprint the required system behavior, structure the expert/persona workflow, set the quality bar and require the implementation to survive acceptance and evidence gates before I treat it as done.
 
 More detail: [docs/HOW_I_BUILD_WITH_AI.md](docs/HOW_I_BUILD_WITH_AI.md)
 
@@ -75,12 +79,14 @@ More detail: [docs/HOW_I_BUILD_WITH_AI.md](docs/HOW_I_BUILD_WITH_AI.md)
 
 `Node.js 24` · `pnpm` · `Supabase` · `deterministic rule evaluation` · `automated tests` · `browser E2E` · `release / auth verification`
 
-## Inspect the proof
+Technology is implementation context, not a claim that I personally selected or hand-authored every component.
+
+## Inspect the case study
 
 - [Observable proof](PROOF.md)
 - [Sanitized decision examples](examples/sanitized-billing-decisions.json)
 - [System view](docs/SYSTEM_VIEW.md)
-- [Engineering decisions](docs/DECISIONS.md)
+- [System requirements & trade-offs](docs/DECISIONS.md)
 - [Verification approach](docs/VERIFICATION.md)
 - [Public / private boundary](PUBLIC_BOUNDARY.md)
 
@@ -90,9 +96,10 @@ More detail: [docs/HOW_I_BUILD_WITH_AI.md](docs/HOW_I_BUILD_WITH_AI.md)
 - billing accuracy percentages;
 - autonomous invoice authority;
 - that subjective commercial qualification can always be made deterministic;
-- product-market fit.
+- product-market fit;
+- personal authorship of every implementation detail.
 
-The useful employer signal is the implementation judgment: translate the agreement into explicit rules, preserve evidence gaps, and keep the result inspectable enough for a human dispute/review path.
+The employer signal I want this repo to show is how I turn an operational problem into a blueprint, direct AI-assisted implementation and insist on quality/evidence boundaries before accepting the result.
 
 ## Related engineering case studies
 
