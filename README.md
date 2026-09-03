@@ -57,7 +57,7 @@ objective billing rule requires attendance
 
 The system should not upgrade a related CRM/calendar event into proof of attendance merely because a cleaner answer is commercially convenient.
 
-## One failure case I test explicitly
+## One failure case the implementation tests explicitly
 
 Invalid or unsupported meeting duration is not allowed to flow through as if it were a normal qualified meeting. The private test suite contains a dedicated invalid-duration case alongside the core billing tests.
 
@@ -67,7 +67,7 @@ That kind of edge case matters because deterministic automation becomes dangerou
 
 AI accelerates implementation candidates, test ideas, integration work and review. It does not get to invent agreement meaning or missing evidence.
 
-I keep the agreement version, objective rule boundary, evidence authority and `REVIEW` conditions explicit so the generated implementation can be checked against the commercial contract.
+I treat the agreement version, objective rule boundary, evidence authority and `REVIEW` conditions as explicit constraints so the generated implementation can be checked against the commercial contract.
 
 More detail: [docs/HOW_I_BUILD_WITH_AI.md](docs/HOW_I_BUILD_WITH_AI.md)
 
