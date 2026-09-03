@@ -1,43 +1,40 @@
-# How I build with AI
+# AI in the Billable Meetings workflow
 
-AI is useful implementation leverage, but it should not become the authority for contract meaning or missing billing evidence.
+AI is implementation leverage. The billing agreement is the authority.
 
 ## Where AI helps
 
-I use AI to accelerate:
+- exploring implementation approaches;
+- drafting and revising code candidates;
+- generating rule-interaction and edge-case ideas;
+- investigating integrations;
+- reviewing tests and documentation.
 
-- solution exploration;
-- implementation candidates;
-- test and edge-case generation;
-- integration investigation;
-- review of rule interactions;
-- documentation and iteration.
+## What stays explicit
 
-## What remains explicit
-
-For Billable Meetings OS, the workflow still needs an explicit owner for:
-
-- the billing agreement being evaluated;
-- which clauses are objective enough for deterministic treatment;
+- which agreement version governs the decision;
+- which clauses are objective enough for deterministic evaluation;
 - what evidence is authoritative;
 - the difference between booking, attendance and billability;
-- when contradictory evidence should stop a binary decision;
-- which cases belong in human/client review.
+- when contradictory/missing evidence must route to `REVIEW`;
+- which commercial questions still require human judgment.
 
-## Quality model
+## Working loop
 
 ```text
+agreement
+   ↓
+objective rule boundary
+   ↓
 AI-assisted implementation
-        ↓
-frozen agreement rules
-        ↓
-deterministic evaluation
-        ↓
-evidence trace
-        ↓
+   ↓
+tests + evidence checks
+   ↓
 BILLABLE / NON-BILLABLE / REVIEW
-        ↓
-review / accept / dispute
+   ↓
+human review where needed
 ```
 
-The value of AI here is speed and leverage. The quality gate is whether the billing decision remains traceable to the agreement and evidence rather than to model plausibility.
+The quality test is whether the decision can be explained from the agreement and evidence without trusting a model—or the implementation—blindly.
+
+For concrete implementation evidence, see [../PROOF.md](../PROOF.md).

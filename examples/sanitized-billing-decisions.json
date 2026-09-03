@@ -1,0 +1,42 @@
+[
+  {
+    "example_type": "synthetic_redacted_portfolio_example",
+    "agreement_version": "example-v1",
+    "meeting": {
+      "booking_record": true,
+      "attendance_evidence": true,
+      "duration_valid": true
+    },
+    "objective_rules": {
+      "attendance_required": true,
+      "minimum_duration_satisfied": true
+    },
+    "decision": "BILLABLE",
+    "reason": "All required objective conditions are supported by evidence."
+  },
+  {
+    "example_type": "synthetic_redacted_portfolio_example",
+    "agreement_version": "example-v1",
+    "meeting": {
+      "booking_record": true,
+      "attendance_evidence": null,
+      "duration_valid": true
+    },
+    "objective_rules": {
+      "attendance_required": true
+    },
+    "decision": "REVIEW",
+    "reason": "A booking exists, but authoritative attendance evidence is missing."
+  },
+  {
+    "example_type": "synthetic_redacted_portfolio_example",
+    "agreement_version": "example-v1",
+    "meeting": {
+      "booking_record": true,
+      "attendance_evidence": true,
+      "duration_valid": false
+    },
+    "decision": "NON-BILLABLE",
+    "reason": "A mandatory objective duration condition failed."
+  }
+]
