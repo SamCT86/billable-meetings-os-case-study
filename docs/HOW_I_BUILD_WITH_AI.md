@@ -1,40 +1,48 @@
-# AI in the Billable Meetings workflow
+# How I direct the AI-assisted Billable Meetings build
 
-AI is implementation leverage. The billing agreement is the authority.
+Billable Meetings is built with heavy use of AI agents/models. My role is not to claim authorship of every line of code; it is to direct the build toward a product, system boundary and quality bar I define.
 
-## Where AI helps
+## What I own
 
-- exploring implementation approaches;
-- drafting and revising code candidates;
-- generating rule-interaction and edge-case ideas;
-- investigating integrations;
-- reviewing tests and documentation.
+- researching the operational/commercial problem and deciding what product to pursue;
+- defining the high-level blueprint and required decision behavior;
+- creating specialist personas/experts and assigning them responsibilities;
+- setting constraints, acceptance criteria and quality gates;
+- demanding tests, evidence handling and repeated review;
+- sending work back for revision when the result does not meet the required quality.
 
-## What stays explicit
+## What AI handles heavily
 
-- which agreement version governs the decision;
-- which clauses are objective enough for deterministic evaluation;
-- what evidence is authoritative;
-- the difference between booking, attendance and billability;
-- when contradictory/missing evidence must route to `REVIEW`;
-- which commercial questions still require human judgment.
+- implementation and code generation/revision;
+- exploration of technical approaches;
+- integration investigation;
+- test scaffolding and edge-case generation;
+- technical review and documentation.
+
+I do **not** claim that I independently selected or hand-authored every library, rule-engine mechanism, data structure or code path.
 
 ## Working loop
 
 ```text
-agreement
-   ↓
-objective rule boundary
-   ↓
-AI-assisted implementation
-   ↓
-tests + evidence checks
-   ↓
-BILLABLE / NON-BILLABLE / REVIEW
-   ↓
-human review where needed
+research billing problem
+        ↓
+define product + blueprint + quality bar
+        ↓
+assign specialist AI personas / agents
+        ↓
+AI-assisted implementation and iteration
+        ↓
+tests / evidence / quality gates
+        ↓
+accept, reject or send back for revision
 ```
 
-The quality test is whether the decision can be explained from the agreement and evidence without trusting a model—or the implementation—blindly.
+The blueprint requires the system to keep booking, attendance and billability distinct and to preserve a review path when evidence is insufficient. The low-level mechanism used to satisfy those requirements may come from the AI-assisted implementation process unless I explicitly state otherwise.
+
+## Interview boundary
+
+I can explain the product problem, why the system exists, the blueprint I required, how I structured the AI workflow, the quality gates I demanded and what the current evidence supports.
+
+For a low-level implementation choice, I will distinguish between **a requirement I set** and **a technical choice made inside the AI-assisted implementation process**.
 
 For concrete implementation evidence, see [../PROOF.md](../PROOF.md).
