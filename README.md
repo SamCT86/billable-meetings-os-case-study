@@ -93,3 +93,9 @@ More detail: [docs/HOW_I_BUILD_WITH_AI.md](docs/HOW_I_BUILD_WITH_AI.md)
 - product-market fit.
 
 The useful employer signal is the implementation judgment: translate the agreement into explicit rules, preserve evidence gaps, and keep the result inspectable enough for a human dispute/review path.
+
+## Related engineering case studies
+
+- [ReleaseProof](https://github.com/SamCT86/releaseproof-case-study) — exact-build verification and reproducible release evidence.
+- [PriceBriefs](https://github.com/SamCT86/pricebriefs-case-study) — deterministic decision support with explicit refusal states.
+- [MachineOutcome](https://github.com/SamCT86/machineoutcome-case-study) — evidence-backed verification of AI-agent outcomes.
