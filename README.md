@@ -1,9 +1,25 @@
 # Billable Meetings OS — contract + evidence → billability
 
-**Sarmad Tawfeek · AI systems · technical implementation · automation**  
-**Status:** Building  
-**Public product:** https://billablemeetings.com  
-**Portfolio:** https://sarmadtawfeek.se/
+**Sarmad Tawfeek · founder / product owner · AI-assisted systems build**  
+**Status:** Live product · commercial validation in progress  
+**Public product:** https://billablemeetings.com/  
+**Public product facts:** https://billablemeetings.com/product-facts.json  
+**Machine-readable product summary:** https://billablemeetings.com/llms.txt  
+**Portfolio / founder profile:** https://sarmadtawfeek.se/
+
+## Current public product state
+
+Billable Meetings is live for B2B appointment-setting and performance agencies that bill clients per held, accepted or otherwise rule-defined meeting.
+
+The current commercial offer is deliberately simple:
+
+- **€500 one-time** for one real client billing cycle;
+- **€399/month optional continuation** only if the buyer explicitly chooses to continue;
+- no automatic subscription from the first cycle.
+
+The product currently publishes three external product evaluations with a 4.8/5 arithmetic average and evaluator-reported workflow/outcome observations. These are **product evaluations, not customer reviews**, and the reported before/after figures are **not independently audited ROI studies**. Company identities and photos are withheld at the participants' request. See the current disclosure and product surface at https://billablemeetings.com/.
+
+Public sample settlement data is synthetic. Dollar-denominated sample amounts illustrate a client billing scenario in USD and are not Billable Meetings product pricing.
 
 ## My role in this build
 
@@ -89,10 +105,14 @@ Technology is implementation context, not a claim that I personally selected or 
 - [System requirements & trade-offs](docs/DECISIONS.md)
 - [Verification approach](docs/VERIFICATION.md)
 - [Public / private boundary](PUBLIC_BOUNDARY.md)
+- [Live pricing](https://billablemeetings.com/pricing/)
+- [Security & data practices](https://billablemeetings.com/security/)
+- [Sample settlement](https://billablemeetings.com/sample-settlement/)
 
 ## Not claimed
 
 - customer adoption metrics;
+- independently audited ROI from the published product evaluations;
 - billing accuracy percentages;
 - autonomous invoice authority;
 - that subjective commercial qualification can always be made deterministic;
