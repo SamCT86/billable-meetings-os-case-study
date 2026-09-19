@@ -19,7 +19,7 @@ Billable Meetings is built with heavy use of AI agents/models. My role is not to
 - test scaffolding and edge-case generation;
 - technical review and documentation.
 
-I do **not** claim that I independently selected or hand-authored every library, rule-engine mechanism, data structure or code path.
+AI assistance is explicit, but it does not outsource accountability: I review resulting behavior, debug failures, set acceptance gates and decide what is accepted or rejected.
 
 ## Working loop
 

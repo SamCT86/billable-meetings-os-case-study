@@ -6,7 +6,7 @@ A public, executable engineering reference derived from the **truth contract** b
 
 **Live product:** https://billablemeetings.com
 
-## Five-minute technical evaluation
+## Run locally
 
 ```bash
 git clone https://github.com/SamCT86/billable-meetings-os-case-study.git
@@ -49,11 +49,11 @@ The private production implementation is materially broader: normalization, chro
 
 This repository is a **reference edition**, not a source release of the commercial system.
 
-## How I build
+## Engineering ownership
 
-I use AI agents heavily for implementation, investigation, test generation and critique. My ownership is the product problem, system requirements, truth contracts, architecture constraints, acceptance criteria, adversarial review and the decision to accept or reject the resulting system.
+AI tools are part of my implementation workflow. I use them to accelerate investigation, implementation, testing and review, while remaining accountable for the system boundary, architecture constraints, code review, debugging, acceptance criteria and the decision to ship or reject a change.
 
-I do not claim to have hand-written every line. The intended signal is that I can direct an AI-native engineering workflow toward deterministic, testable, fail-closed behavior rather than accepting plausible-looking output.
+The useful question here is not who typed each token. It is whether the behavior is explicit, testable, reproducible and safe under failure. The executable tests and design trade-offs in this repository are the public evidence for that claim.
 
 ## Public/private boundary
 
