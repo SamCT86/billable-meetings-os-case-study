@@ -7,6 +7,19 @@
 **Machine-readable product summary:** https://billablemeetings.com/llms.txt  
 **Portfolio / founder profile:** https://sarmadtawfeek.se/
 
+## Five-minute technical review
+
+If you are evaluating this as engineering evidence, start here:
+
+1. [Technical evaluator guide](TECHNICAL_EVALUATOR_GUIDE.md)
+2. [Observable proof](PROOF.md)
+3. [Sanitized decision examples](examples/sanitized-billing-decisions.json)
+4. [System view](docs/SYSTEM_VIEW.md)
+5. [Verification approach](docs/VERIFICATION.md)
+6. [Public / private boundary](PUBLIC_BOUNDARY.md)
+
+The production implementation remains private. This case study is meant to make the **system boundary, truth model, failure handling, verification discipline, and current evidence state** inspectable without pretending that a portfolio wrapper is the production source tree.
+
 ## Current public product state
 
 Billable Meetings is live for B2B appointment-setting and performance agencies that bill clients per held, accepted or otherwise rule-defined meeting.
