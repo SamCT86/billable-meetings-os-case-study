@@ -1,0 +1,12 @@
+{
+  "rules": [
+    { "id": "booked", "evidenceKey": "BOOKED", "op": "eq", "expected": true, "mandatory": true },
+    { "id": "attended", "evidenceKey": "ATTENDED", "op": "eq", "expected": true, "mandatory": true },
+    { "id": "duration", "evidenceKey": "DURATION_MINUTES", "op": "min", "minimum": 20, "mandatory": true }
+  ],
+  "evidence": {
+    "BOOKED": [{ "value": true, "source": "calendar:synthetic-1" }],
+    "ATTENDED": [{ "value": true, "source": "meeting:synthetic-1" }],
+    "DURATION_MINUTES": [{ "value": 31, "source": "meeting:synthetic-1" }]
+  }
+}
