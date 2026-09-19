@@ -1,5 +1,7 @@
 # Billable Meetings — deterministic billing truth, runnable reference
 
+[![verify-reference](https://github.com/SamCT86/billable-meetings-os-case-study/actions/workflows/verify-reference.yml/badge.svg)](https://github.com/SamCT86/billable-meetings-os-case-study/actions/workflows/verify-reference.yml)
+
 A public, executable engineering reference derived from the **truth contract** behind Billable Meetings. The production product and production codebase remain private.
 
 **Live product:** https://billablemeetings.com
@@ -70,6 +72,12 @@ Private:
 - infrastructure and credentials;
 - private review tokens and internal runtime details;
 - proprietary product workflows and unreleased commercial logic.
+
+## Related runnable references
+
+- [MachineOutcome](https://github.com/SamCT86/machineoutcome-case-study) — reconcile observed state before trusting or retrying agent mutations.
+- [ReleaseProof](https://github.com/SamCT86/releaseproof-case-study) — exact-artifact evidence and explicit `INCONCLUSIVE` states.
+- [PriceBriefs](https://github.com/SamCT86/pricebriefs-case-study) — evidence-gated commercial decisions and refusal states.
 
 ## Not claimed
 
