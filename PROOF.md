@@ -1,10 +1,10 @@
 # Observable proof
 
-This file is the employer-facing proof layer for Billable Meetings OS.
+This file records observable engineering evidence for Billable Meetings OS.
 
 It is derived from a fresh read of the private implementation repository. The private rule engine, schemas, customer-like evidence, review tokens, endpoints and production configuration are not copied here.
 
-**Ownership note:** the implementation evidence below is not a claim that I personally hand-authored or independently selected every low-level mechanism. My direct role is product research/direction, system blueprint and requirements, expert/persona orchestration, acceptance criteria and quality gates; AI is used heavily in implementation.
+**Engineering ownership:** AI assistance is used throughout the implementation workflow. I remain accountable for problem framing, architecture constraints, reviewing and debugging changes, acceptance/test gates and release decisions. Where this document cites behavior that remains in the private implementation, it is labeled as implementation evidence rather than as a claim about manual keystroke authorship.
 
 ## What is implemented
 
@@ -76,11 +76,11 @@ They are synthetic/redacted representations of the implemented decision states, 
 | Autonomous invoice authority | Not claimed |
 | Product-market fit | Not claimed |
 
-## What I personally own and can explain
+## Engineering decisions I own and can explain
 
 - why I pursued the billability problem and what operational/commercial friction I wanted to reduce;
 - the high-level blueprint: agreement + evidence → bounded billability result + review path;
-- how I structured expert/persona workflows to research, build, critique and revise the system;
+- how I structured implementation, review, critique and revision loops around the system;
 - the quality gates I required around evidence gaps, malformed inputs and review states;
 - what the current implementation evidence supports and what it does not support;
 - how I direct further iteration when AI-generated work fails the system or quality requirements.
