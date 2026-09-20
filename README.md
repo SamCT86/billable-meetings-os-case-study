@@ -1,25 +1,23 @@
-# Billable Meetings — turn billing agreements into deterministic decisions
+# Billable Meetings - turn meeting evidence into clear billing decisions
 
 [![verify-reference](https://github.com/SamCT86/billable-meetings-os-case-study/actions/workflows/verify-reference.yml/badge.svg)](https://github.com/SamCT86/billable-meetings-os-case-study/actions/workflows/verify-reference.yml)
-
-**Engineering signal:** translate messy commercial rules into deterministic software with explicit evidence and review states.
 
 **Live product:** https://billablemeetings.com  
 **Portfolio:** https://sarmadtawfeek.se
 
-Agencies can agree to pay per qualified meeting and still disagree later about what actually counts. Role fit, duplicates, cancellations, attendance, duration and missing records turn a seemingly simple billing rule into an evidence problem.
+Pay-per-meeting agreements sound simple until two sides disagree about what actually counts. Was the attendee from the right company? Was the meeting duplicated, cancelled, too short, or missing evidence?
 
-This public repository exposes the core decision boundary in runnable form:
+I built this reference to show how those rules can be turned into deterministic software without pretending that incomplete evidence is certain.
 
 ```text
 billing agreement
 + authoritative meeting evidence
-→ BILLABLE | NON_BILLABLE | REVIEW
+-> BILLABLE | NON_BILLABLE | REVIEW
 ```
 
-`REVIEW` is not an error state. It is how the system refuses to turn missing, contradictory or subjective evidence into invoice certainty.
+`REVIEW` is intentional. It means the system does not have enough trustworthy evidence to make a clean billing decision.
 
-## Run the decision engine
+## Try it
 
 ```bash
 git clone https://github.com/SamCT86/billable-meetings-os-case-study.git
@@ -27,68 +25,68 @@ cd billable-meetings-os-case-study
 npm test
 ```
 
-Primary surfaces:
+## What the decision engine checks
 
-- `src/reference-evaluator.mjs` — bounded evidence-to-billability engine
-- `test/reference-evaluator.test.mjs` — adversarial truth-boundary cases
-- `fixtures/billable.json` — synthetic meeting/evidence input
-- `PROOF.md` — broader implementation evidence
-- `PUBLIC_BOUNDARY.md` — public/private boundary
+The reference demonstrates that:
 
-## Decision invariants
-
-The executable reference demonstrates that:
-
-1. every mandatory objective rule must pass before `BILLABLE`;
-2. a mandatory objective failure yields `NON_BILLABLE`;
-3. missing or contradictory authoritative evidence yields `REVIEW`;
+1. every mandatory objective rule must pass before a meeting becomes `BILLABLE`;
+2. a mandatory objective failure becomes `NON_BILLABLE`;
+3. missing or contradictory authoritative evidence becomes `REVIEW`;
 4. subjective criteria are not silently converted into objective truth;
-5. evidence ordering does not change the outcome.
+5. evidence ordering does not change the result.
 
-This is the part I care about most in commercial automation: **the code must preserve the boundary between a business rule, the evidence available to evaluate it, and the decision the system is actually authorized to make.**
+The important separation is between **the commercial rule, the evidence used to evaluate it, and the decision the software is actually allowed to make**.
 
-## From business ambiguity to software
+## What to inspect
 
-The broader private implementation expands that bounded engine into a product system with normalization, chronology, duplicate handling, settlement records, review/dispute behavior, persistence, Supabase infrastructure, browser E2E and customer-facing product surfaces.
+- `src/reference-evaluator.mjs` - the evidence-to-billability engine.
+- `test/reference-evaluator.test.mjs` - adversarial and edge-case tests.
+- `fixtures/billable.json` - synthetic meeting and evidence input.
+- `PROOF.md` - broader implementation evidence.
+- `PUBLIC_BOUNDARY.md` - what is public and what stays private.
 
-That makes Billable Meetings a useful example of my product-engineering approach:
+## From a business rule to working software
+
+The private product expands the same idea into a broader system with normalization, chronology, duplicate handling, settlement records, review/dispute behavior, persistence, Supabase infrastructure, browser E2E tests, and customer-facing product surfaces.
+
+A simplified version of the design is:
 
 ```text
-commercial ambiguity
-→ explicit contract
-→ deterministic engine
-→ evidence trail
-→ exception / review path
-→ usable product surface
+messy commercial agreement
+-> explicit rules
+-> deterministic evaluator
+-> evidence trail
+-> review path for uncertainty
+-> usable product surface
 ```
 
-## Public / private boundary
+## Public and private boundary
 
 Published here:
 
 - bounded decision logic;
 - synthetic fixtures;
 - executable tests and CI;
-- non-customer system/evidence documentation.
+- non-customer system and evidence documentation.
 
 Kept private:
 
 - production engine and schemas;
-- customer data and customer-like private evidence;
+- customer data and private evidence;
 - infrastructure credentials and review tokens;
 - proprietary workflows and unreleased commercial logic.
 
+## Related work
+
+- [Agent Forecast Foundry](https://github.com/SamCT86/agent-forecast-foundry-case-study) - verify AI-agent runs after the model responds.
+- [MachineOutcome](https://github.com/SamCT86/machineoutcome-case-study) - read back external state before trusting or retrying a mutation.
+- [ReleaseProof](https://github.com/SamCT86/releaseproof-case-study) - verify that release evidence belongs to the exact artifact being shipped.
+- [PriceBriefs](https://github.com/SamCT86/pricebriefs-case-study) - validate market evidence before using it in a pricing decision.
+
 ## Engineering accountability
 
-AI tools are part of my implementation workflow. I remain accountable for problem framing, system boundaries, architecture constraints, debugging, acceptance criteria, tests and release decisions.
-
-## Related engineering proof
-
-- [Agent Forecast Foundry](https://github.com/SamCT86/agent-forecast-foundry-case-study) — bounded post-model verification and AI evaluation mechanics.
-- [MachineOutcome](https://github.com/SamCT86/machineoutcome-case-study) — reconcile observed state before trusting or retrying agent mutations.
-- [ReleaseProof](https://github.com/SamCT86/releaseproof-case-study) — exact-artifact evidence and explicit `INCONCLUSIVE` states.
-- [PriceBriefs](https://github.com/SamCT86/pricebriefs-case-study) — evidence-gated market decisions and refusal states.
+I use AI tools as part of my implementation workflow. I remain responsible for the problem framing, system boundaries, architecture, debugging, acceptance criteria, tests, and release decisions.
 
 ## Scope
 
-This repository does not claim product-market fit, customer outcome metrics, autonomous invoice authority, or that this bounded reference is the production runtime.
+This repository does not claim product-market fit, customer outcome metrics, autonomous invoice authority, or that this public reference is the production runtime.
