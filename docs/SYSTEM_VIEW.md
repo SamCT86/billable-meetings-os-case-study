@@ -33,11 +33,11 @@ This is a deliberately public abstraction. It explains the commercial decision f
 
 ## Boundary 1 — agreement authority
 
-The billing agreement defines the objective decision boundary. The system should not invent rules after seeing the meeting.
+The billing agreement defines the objective decision boundary. The system should not invent rules after seeing the meeting. The public evaluator requires the rule set to carry the same agreement identity as the decision context.
 
 ## Boundary 2 — evidence
 
-A related calendar or CRM event does not automatically prove attendance or billability.
+A related calendar or CRM event does not automatically prove attendance or billability. The public evaluator rejects cross-meeting evidence and evidence with no source identity into `REVIEW`; source identity is traceability, not a claim that this reference authenticates production providers.
 
 ## Boundary 3 — deterministic lane
 

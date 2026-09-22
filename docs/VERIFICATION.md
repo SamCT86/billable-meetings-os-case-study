@@ -21,10 +21,10 @@ The important rules are:
 ## Verification layers
 
 ### 1. Agreement version
-The system must know which agreement/rule set governs the decision.
+The system must know which agreement/rule set governs the decision. In the public reference, every rule is bound to the target `agreementId`; a mismatched rule set routes to `REVIEW`.
 
 ### 2. Meeting evidence
-Relevant evidence is normalized before rule evaluation.
+Relevant evidence is normalized before rule evaluation. The public reference binds each evidence row to the target `meetingId` and requires a non-empty source identity before that row can support a deterministic result. Source identity provides traceability here; production source authority remains outside this bounded public reference.
 
 ### 3. Objective rule evaluation
 Rules that can be evaluated deterministically should produce stable, inspectable results.
@@ -37,8 +37,9 @@ Cases outside the deterministic evidence envelope belong in review rather than i
 
 ## What AI-assisted implementation must survive
 
-- Are the agreement rules frozen and explicit?
+- Are the agreement rules frozen, explicit and bound to the agreement being evaluated?
 - Is the evidence attached to the correct delivered meeting?
+- Does each evidence row retain source identity for later inspection?
 - Does the evidence actually establish attendance or another required fact?
 - Are any authoritative facts missing or contradictory?
 - Is a subjective clause being incorrectly treated as deterministic?

@@ -10,8 +10,9 @@ Pay-per-meeting agreements sound simple until two sides disagree about what actu
 I built this reference to show how those rules can be turned into deterministic software without pretending that incomplete evidence is certain.
 
 ```text
-billing agreement
-+ authoritative meeting evidence
+agreement identity + frozen rule set
++ target meeting identity
++ source-identified meeting evidence
 -> BILLABLE | NON_BILLABLE | REVIEW
 ```
 
@@ -29,13 +30,17 @@ npm test
 
 The reference demonstrates that:
 
-1. every mandatory objective rule must pass before a meeting becomes `BILLABLE`;
-2. a mandatory objective failure becomes `NON_BILLABLE`;
-3. missing or contradictory authoritative evidence becomes `REVIEW`;
-4. subjective criteria are not silently converted into objective truth;
-5. evidence ordering does not change the result.
+1. every rule must belong to the agreement being evaluated;
+2. evidence from another meeting cannot make the target meeting `BILLABLE`;
+3. evidence needs a non-empty source identity before it can support a deterministic result;
+4. every mandatory objective rule must pass before a meeting becomes `BILLABLE`;
+5. a mandatory objective failure becomes `NON_BILLABLE`;
+6. missing or contradictory evidence becomes `REVIEW`;
+7. malformed/empty rule contracts remain `REVIEW` rather than becoming billable by default;
+8. subjective criteria are not silently converted into objective truth;
+9. evidence ordering does not change the result.
 
-The important separation is between **the commercial rule, the evidence used to evaluate it, and the decision the software is actually allowed to make**.
+The important separation is between **the governing agreement, the delivered meeting, the evidence used to evaluate it, and the decision the software is actually allowed to make**. The public reference requires source identity for traceability; it does not claim to authenticate or rank real production sources.
 
 ## What to inspect
 
