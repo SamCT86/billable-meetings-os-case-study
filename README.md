@@ -7,7 +7,7 @@
 
 Pay-per-meeting agreements sound simple until two sides disagree about what actually counts. Was the attendee from the right company? Was the meeting duplicated, cancelled, too short, or missing evidence?
 
-I built this reference to show how those rules can be turned into deterministic software without pretending that incomplete evidence is certain.
+I built this reference because those disagreements are really evidence problems. The software should be able to say what passed, what failed, and when the available evidence is not good enough to make a clean billing decision.
 
 ```text
 agreement identity + frozen rule set
@@ -81,17 +81,12 @@ Kept private:
 - infrastructure credentials and review tokens;
 - proprietary workflows and unreleased commercial logic.
 
-## Related work
+## What I am trying to prove with this repo
 
-- [Agent Forecast Foundry](https://github.com/SamCT86/agent-forecast-foundry-case-study) - verify AI-agent runs after the model responds.
-- [MachineOutcome](https://github.com/SamCT86/machineoutcome-case-study) - read back external state before trusting or retrying a mutation.
-- [ReleaseProof](https://github.com/SamCT86/releaseproof-case-study) - verify that release evidence belongs to the exact artifact being shipped.
-- [PriceBriefs](https://github.com/SamCT86/pricebriefs-case-study) - validate market evidence before using it in a pricing decision.
+Not that every meeting can be judged automatically. The useful claim is smaller: objective commercial rules can be encoded so that missing or contradictory evidence remains visible instead of being quietly turned into a billable result.
 
-## Engineering accountability
+I do **not** claim product-market fit, customer outcome metrics, autonomous invoice authority, or that this public reference is the production runtime.
 
-I use AI tools as part of my implementation workflow. I remain responsible for the problem framing, system boundaries, architecture, debugging, acceptance criteria, tests, and release decisions.
+I use AI tools during implementation, but I own the rule model, decision boundaries, debugging, tests, and the final call on what is safe to ship.
 
-## Scope
-
-This repository does not claim product-market fit, customer outcome metrics, autonomous invoice authority, or that this public reference is the production runtime.
+For my main Applied AI runtime work, see [Agent Forecast Foundry](https://github.com/SamCT86/agent-forecast-foundry-case-study).
