@@ -35,6 +35,16 @@ BILLABLE | NON-BILLABLE | REVIEW
 
 The implemented behavior keeps booking, attendance and billability separate and preserves `REVIEW` when evidence cannot support a binary result.
 
+## Public provenance hardening
+
+The runnable public evaluator now binds three pieces that were previously only described conceptually:
+
+- every rule must belong to the target agreement;
+- evidence rows must belong to the target meeting;
+- evidence rows must retain a non-empty source identity.
+
+Malformed decision context, empty rule sets and malformed `mandatory`/objective rule definitions route to `REVIEW` instead of allowing JavaScript defaults or vacuous truth to create `BILLABLE`. The public reference does **not** authenticate real providers or decide which production system is authoritative; it proves the narrower identity/traceability boundary.
+
 ## Concrete failure examples
 
 ### 1. Booking without attendance proof
