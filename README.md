@@ -89,4 +89,4 @@ I do **not** claim product-market fit, customer outcome metrics, autonomous invo
 
 I use AI tools during implementation, but I own the rule model, decision boundaries, debugging, tests, and the final call on what is safe to ship.
 
-For my main Applied AI runtime work, see [Agent Forecast Foundry](https://github.com/SamCT86/agent-forecast-foundry-case-study).
+For the broader portfolio and how these public references fit together, see [my GitHub profile](https://github.com/SamCT86) or [sarmadtawfeek.se](https://sarmadtawfeek.se).
