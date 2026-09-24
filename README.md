@@ -7,7 +7,7 @@
 
 Pay-per-meeting agreements sound simple until two sides disagree about what actually counts. Was the attendee from the right company? Was the meeting duplicated, cancelled, too short, or missing evidence?
 
-I built this reference because those disagreements are really evidence problems. The software should be able to say what passed, what failed, and when the available evidence is not good enough to make a clean billing decision.
+I use this reference to make the evidence problem explicit. The software should be able to say what passed, what failed, and when the available evidence is not good enough to make a clean billing decision.
 
 ```text
 agreement identity + frozen rule set
@@ -87,6 +87,6 @@ Not that every meeting can be judged automatically. The useful claim is smaller:
 
 I do **not** claim product-market fit, customer outcome metrics, autonomous invoice authority, or that this public reference is the production runtime.
 
-I use AI tools during implementation, but I own the rule model, decision boundaries, debugging, tests, and the final call on what is safe to ship.
+This reference is AI-assisted. My role is to define the commercial problem and rule model, direct the implementation, set acceptance criteria, test the decision boundaries, verify the behavior and make the final ship/reject call. It is not a claim that I manually wrote every line.
 
 For the broader portfolio and how these public references fit together, see [my GitHub profile](https://github.com/SamCT86) or [sarmadtawfeek.se](https://sarmadtawfeek.se).
